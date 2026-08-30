@@ -1,5 +1,4 @@
 "use client";
-import { ArrowRight, Trophy, Search, HelpCircle } from "lucide-react";
 "use client";
 
 import { EmptyState } from "@/components/QueryState";
@@ -10,12 +9,9 @@ import Link from "next/link"
 import dynamic from "next/dynamic"
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { X, ArrowRight, Trophy, Search, HelpCircle, Compass } from "lucide-react"
 import { Input } from "@/components/ui/input"
-import { Skeleton } from "@/components/ui/skeleton"
-import { getHuntCapacity, getRemainingSpots } from "@/lib/huntStore"
 import { ErrorBoundary } from "@/components/ErrorBoundary"
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Header } from "@/components/Header"

@@ -5,7 +5,6 @@ vi.mock("@/lib/progressData", () => ({
   getAllProgressForHunt: vi.fn(),
 }));
 
-import { getAllProgressForHunt } from "@/lib/progressData";
 import { computeDifficulty, MIN_SAMPLES } from "../computeDifficulty";
 import type { StoredProgressEntry } from "@/lib/progressData";
 

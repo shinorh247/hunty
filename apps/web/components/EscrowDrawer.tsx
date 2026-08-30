@@ -5,7 +5,6 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { Button } from "@hunty/ui";
 import { Input } from "@/components/ui/input";
-import { getAllRewardEscrows } from "@/lib/contracts/rewardManager";
 import { getHuntById } from "@/lib/huntStore";
 import { getActiveWalletAdapter } from "@/lib/walletAdapter";
 import {

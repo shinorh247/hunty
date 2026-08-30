@@ -1,4 +1,3 @@
-import type { FeatureFlagKey, FeatureFlagMap, FeatureFlagValue } from "./definitions"
 import { FEATURE_FLAG_DEFINITIONS } from "./definitions"
 import { evaluateFlag } from "./evaluate"
 

@@ -1,12 +1,3 @@
-import { getToken } from "next-auth/jwt"
-import { NextRequest } from "next/server"
-import { ApiError } from "./errors"
-import { auditLog } from "@/lib/audit"
-
-export interface AdminUser {
-  id: string
-  email?: string
-  role: string
 /**
  * Simple admin-request guard.
  *
@@ -32,6 +23,12 @@ import { NextResponse } from "next/server"
 import { logger } from "@/lib/logger"
 import { AppError } from "./errors"
 
+export interface AdminUser {
+  id: string
+  email?: string
+  role: string
+}
+
 class AdminAuthError extends AppError {
   constructor(message: string, status = 401) {
     super(message, status, "UNAUTHORIZED")
@@ -40,16 +37,12 @@ class AdminAuthError extends AppError {
 }
 
 export async function assertAdminAuth(req: Request): Promise<AdminUser> {
-  const token = await getToken({ req: req as NextRequest })
+  const secret = process.env.ADMIN_API_SECRET
 
-  if (!token) {
-    auditLog("unauthorized", { path: new URL(req.url).pathname, reason: "missing_token" }, "anonymous")
-    throw new ApiError(401, "Unauthorized")
+  if (!secret && process.env.NODE_ENV === "production") {
+    logger.warn("ADMIN_API_SECRET is not set; all admin requests are being rejected")
   }
 
-  if (token.role !== "admin") {
-    auditLog("unauthorized", { path: new URL(req.url).pathname, userId: token.sub, reason: "insufficient_role" }, token.sub ?? "unknown")
-    throw new ApiError(403, "Forbidden")
   const authHeader = req.headers.get("authorization") ?? ""
   const token = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : null
 
@@ -69,9 +62,11 @@ export async function assertAdminAuth(req: Request): Promise<AdminUser> {
   }
 
   return {
-    id: token.sub!,
-    email: token.email ?? undefined,
-    role: token.role as string,
+    id: "admin",
+    email: undefined,
+    role: "admin",
+  }
+}
 /**
  * Convenience wrapper that returns a `NextResponse` instead of throwing.
  * Useful when you need to handle auth inline rather than relying on the

@@ -3,7 +3,6 @@ import React from "react"
 import { toast } from "sonner"
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 
-import * as activityFeedModule from "@/lib/contracts/activityFeed"
 import { anonymizeAddress } from "@/lib/contracts/activityFeed"
 import type { ActivityEvent } from "@/lib/types"
 

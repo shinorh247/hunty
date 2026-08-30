@@ -6,7 +6,6 @@ import Link from "next/link";
 import { AchievementShowcase } from "@/components/AchievementShowcase";
 import { HuntCompletionTimeline } from "@/components/HuntCompletionTimeline";
 import { ProfileHighlightBadge, ProfileStatsDashboard } from "@/components/ProfileStatsDashboard";
-import { Button } from "@hunty/ui";
 import { Card } from "@hunty/ui";
 import { WalletAddress } from "@/components/WalletAddress";
 import { WalletIdenticon } from "@/components/WalletIdenticon";

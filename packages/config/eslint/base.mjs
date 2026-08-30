@@ -11,6 +11,8 @@ const config = [
         process.env.NODE_ENV === "production" ? "error" : "warn",
       "jsx-a11y/control-has-associated-label": "error",
       "jsx-a11y/interactive-supports-focus": "error",
+      "no-duplicate-imports": "error",
+      "no-redeclare": "error",
     },
   },
 ];

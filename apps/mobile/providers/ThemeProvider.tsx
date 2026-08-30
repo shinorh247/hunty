@@ -1,5 +1,3 @@
-import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, {
   createContext,
   useContext,
@@ -7,6 +5,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useColorScheme, View } from 'react-native';
 
 export type Theme = 'light' | 'dark';

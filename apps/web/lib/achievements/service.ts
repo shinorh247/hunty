@@ -5,7 +5,6 @@
 
 import { logger } from "@/lib/logger";
 
-import type { AchievementId } from "./config";
 import { ACHIEVEMENTS, PROGRESS_THRESHOLDS } from "./config";
 
 export interface EarnedAchievement {

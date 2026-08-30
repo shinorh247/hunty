@@ -1,27 +1,10 @@
 "use client"
 
-import { useContext, useEffect, useMemo, useState } from "react"
-import Link from "next/link"
-import { formatISOString } from "@/lib/dateUtils"
-import { logger } from "@/lib/logger"
 
-import { Header } from "@/components/Header"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@hunty/ui"
 import { Button } from "@hunty/ui"
-import { WalletContext, shortenAddress } from "@/lib/context/WalletContext"
-import { NftGallery } from "@/components/NftGallery"
 import { BadgeWall } from "@/components/BadgeWall"
-import { LevelBadge, LevelProgress } from "@/components/LevelBadge"
-import { ProfilePageSkeleton } from "@/components/LoadingSkeletons"
-import type { NftRewardDetail } from "@/components/NftDetailModal"
-import { RewardHistorySection } from "@/components/RewardHistorySection"
-import { fetchPlayerRewardHistory } from "@/lib/rewardHistory"
-import { getPlayerAttempts } from "@/lib/huntAttemptHistory"
-import type { HuntAttemptRecord, ReferralStats } from "@/lib/types"
-import { getReferralStats } from "@/lib/referrals"
 import { useFavorites } from "@/hooks/useFavorites"
 import { getAllHunts } from "@/lib/huntStore"
-import type { StoredHunt } from "@/lib/types"
 import { HuntFeedCard } from "@/components/HuntFeedCard"
 "use client";
 
@@ -711,19 +694,6 @@ function StatPill({
 // #355 — RegistrationCard
 // ---------------------------------------------------------------------------
 
-const REGISTRATION_STATUS_STYLES: Record<
-  RegisteredHunt["status"],
-  { badge: string; dot: string }
-> = {
-  Registered: { badge: "bg-blue-50 text-blue-700 border border-blue-200", dot: "bg-blue-400" },
-  "In Progress": { badge: "bg-amber-50 text-amber-700 border border-amber-200", dot: "bg-amber-400" },
-  Completed: { badge: "bg-emerald-50 text-emerald-700 border border-emerald-200", dot: "bg-emerald-400" },
-}
-
-function RegistrationCard({ registration }: { registration: RegisteredHunt }) {
-  const { badge, dot } = REGISTRATION_STATUS_STYLES[registration.status]
-  const isCompleted = registration.status === "Completed"
-  const isActive = registration.status === "In Progress"
 const REGISTRATION_STATUS_STYLES: Record<RegisteredHunt["status"], { badge: string; dot: string }> =
   {
     Registered: { badge: "bg-blue-50 text-blue-700 border border-blue-200", dot: "bg-blue-400" },

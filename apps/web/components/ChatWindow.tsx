@@ -3,7 +3,6 @@
 import { MessageSquare, Settings, X } from "lucide-react"
 import React, { useEffect, useRef,useState } from "react"
 
-import { Button } from "@hunty/ui"
 import { Card, CardContent, CardHeader, CardTitle } from "@hunty/ui"
 import {
   DropdownMenu,

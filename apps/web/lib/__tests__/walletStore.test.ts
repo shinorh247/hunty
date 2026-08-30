@@ -1,5 +1,4 @@
 import { describe, it, expect, beforeEach } from "vitest"
-import { useWalletStore } from "../wallets/walletStore"
 import type { WalletState } from "../wallets/walletStore"
 
 // Reset zustand store state before each test

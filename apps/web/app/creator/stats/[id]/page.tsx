@@ -6,7 +6,6 @@ import { useParams, useRouter } from "next/navigation"
 import { useCallback, useEffect, useState } from "react"
 
 import { Header } from "@/components/Header"
-import { Button } from "@hunty/ui"
 import { Card, CardContent, CardHeader, CardTitle } from "@hunty/ui"
 import { useWallet } from "@/lib/context/WalletContext"
 import { extendEndTime } from "@/lib/contracts/hunt"

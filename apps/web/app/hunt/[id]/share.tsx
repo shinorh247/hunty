@@ -37,10 +37,11 @@ import {
 import { prepareHuntReattempt } from "@/lib/huntAttemptHistory";
 import {
   getHuntById,
+  getHuntCapacity,
+  getRemainingSpots,
   updateHuntStatus,
   validateHuntInvite,
 } from "@/lib/huntStore";
-import { getHuntCapacity, getRemainingSpots } from "@/lib/huntStore";
 import { REGISTRATION_STATUS_DEBOUNCE_MS } from "@/lib/soroban/queryConfig";
 import { withTransactionToast } from "@/lib/txToast";
 import type {

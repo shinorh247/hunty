@@ -1,7 +1,6 @@
 import { act, renderHook } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
-import type { StorageAdapter } from './useLocalStorage'
 import { useLocalStorage } from './useLocalStorage'
 
 function makeAdapter(initial: Record<string, string> = {}): StorageAdapter {

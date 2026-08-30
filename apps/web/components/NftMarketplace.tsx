@@ -14,7 +14,6 @@ import {
 import Image from "next/image"
 import React, { useEffect,useState } from "react"
 
-import { Button } from "@hunty/ui"
 import { Card, CardContent } from "@hunty/ui"
 import {
   Dialog,

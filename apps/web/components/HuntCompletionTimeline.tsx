@@ -3,7 +3,6 @@
 import { ArrowUpRight, Trophy } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@hunty/ui";
 import { Card, CardContent } from "@hunty/ui";
 import type { PlayerHuntCompletion } from "@/lib/playerProfileStats";
 

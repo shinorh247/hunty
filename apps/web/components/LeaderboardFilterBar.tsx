@@ -1,6 +1,5 @@
 "use client"
 
-import type { LeaderboardFilters, LeaderboardMetric,LeaderboardTimePeriod } from "@/lib/types"
 import type { ClueDifficulty } from "@/lib/types"
 import { cn } from "@/lib/utils"
 

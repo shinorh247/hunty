@@ -1,12 +1,3 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-  Dimensions,
-  ActivityIndicator,
-} from 'react-native';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import React, { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator,Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';

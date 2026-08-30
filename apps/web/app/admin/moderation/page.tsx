@@ -11,7 +11,6 @@ import {
   RefreshCw,
   ShieldAlert,
 } from "lucide-react";
-import { Button } from "@hunty/ui";
 import { Card, CardDescription, CardTitle } from "@hunty/ui";
 import { Header } from "@/components/Header";
 import { toast } from "sonner";

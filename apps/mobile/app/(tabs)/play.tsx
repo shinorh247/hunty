@@ -1,15 +1,11 @@
 import { usePlayerLocation } from '@app/hooks/usePlayerLocation';
-import { ClueMarkdownRenderer } from '@components/ClueMarkdownRenderer';
 import { BackgroundLocationControl } from '@components/BackgroundLocationControl';
 import { EmptyState } from '@components/EmptyState';
 import { QRScanner } from '@components/QRScanner';
 import { ThemedButton, ThemedCustomText, ThemedView } from '@components/themed';
 import { useHaptics } from '@hooks/useHaptics';
-import { matchesClueAnswer } from '@lib/clueAnswerVerification';
-import { verifyQrAgainstClue } from '@lib/qrCodeDecryptor';
 import type { Clue } from '@lib/types';
 import { useTheme } from '@providers/ThemeProvider';
-import { useToast } from '@providers/ToastProvider';
 import { getHuntClues } from '@store/huntStore';
 import { usePlayerStore, useWalletStore } from '@store/useStore';
 import type { Clue } from '@hunty/types';

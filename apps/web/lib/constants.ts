@@ -1,4 +1,3 @@
-import { MAINNET_NETWORK_PASSPHRASE } from "@/lib/soroban/client"
 import { getSorobanNetworkPassphrase } from "@/lib/soroban/client"
 
 export function getStellarExplorerUrl(hash: string): string {

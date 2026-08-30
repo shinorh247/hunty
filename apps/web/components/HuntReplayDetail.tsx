@@ -5,7 +5,6 @@ import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
 import { AchievementCertificate } from "@/components/AchievementCertificate"
-import { Button } from "@hunty/ui"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@hunty/ui"
 import { get_hunt_fastest_players } from "@/lib/contracts/hunt"
 import { formatISOString } from "@/lib/dateUtils"

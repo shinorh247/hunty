@@ -5,7 +5,6 @@
  * play history and creates personalized email digest content.
  */
 
-import { readCompletions } from "@/lib/reviews"
 import { getHuntsWithRatings, getAllHunts } from "@/lib/reviews"
 import { getAllHunts as dbGetAllHunts } from "@/lib/huntStore"
 import { logger } from "@/lib/logger"

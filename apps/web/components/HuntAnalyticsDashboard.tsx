@@ -43,7 +43,6 @@ import {
   Tablet,
   HelpCircle,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@hunty/ui";
 import { Button } from "@hunty/ui";
 import { cn } from "@/lib/utils";
 import type { HuntAnalyticsResponse } from "@/lib/huntAnalytics";

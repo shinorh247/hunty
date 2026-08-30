@@ -1,4 +1,3 @@
-import { ClueMarkdownRenderer } from '@components/ClueMarkdownRenderer';
 import { ThemedCustomText, ThemedView } from '@components/themed';
 import type { Clue, StoredHunt } from '@lib/types';
 import { useTheme } from '@providers/ThemeProvider';
